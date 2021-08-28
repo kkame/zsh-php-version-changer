@@ -13,7 +13,7 @@
 ## Support OS
 
 - macOS
-- ubuntu (with ondrej ppa, require root permission)
+- ubuntu (with ondrej ppa)
 
 ## Install
 
@@ -28,6 +28,7 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/kkame/zsh-php-version-ch
 3. composer.json 에 명시된 php의 최소버전을 체크하여 OS 에 설치된 php버전에 맞도록 설정을 임시 또는 직접적으로 변경합니다.
     - macOS의 경우 임시로 PATH를 추가하기 때문에 터미널을 닫을 경우 원래의 설정으로 돌아갑니다
     - ubuntu의 경우 시스템 설정값을 강제로 변경합니다 (root 권한이 필요합니다)
+4. 강제로 변경하고 싶다면 `pvc 7.4` 처럼 명령어와 버전명을 입력해주면 됩니다.
 
 ## How does it work
 
@@ -38,4 +39,4 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/kkame/zsh-php-version-ch
     - In the case of macOS, the PATH is temporarily added, so if you close the terminal, it will return to the original
       setting.
     - In the case of ubuntu, change the system settings forcibly (require root permission)
- 
+4. If you want to force the change, enter the command and version name like `pvc 7.4`.

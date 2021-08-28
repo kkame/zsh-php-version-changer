@@ -3,7 +3,11 @@ pvc() {
 
   if [ -f composer.json ]; then
 
-    PVC_VERSION=$(cat composer.json | jq '.require.php' | grep -o -m 1 '[0-9]\.[0-9]' | head -1)
+    if [ $1 ]; then
+       PVC_VERSION=$1
+    else
+       PVC_VERSION=$(cat composer.json | jq '.require.php' | grep -o -m 1 '[0-9]\.[0-9]' | head -1)
+    fi;
 
     if [ "$PVC_VERSION" ]; then
 
