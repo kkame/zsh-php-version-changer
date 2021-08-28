@@ -35,9 +35,9 @@ pvc() {
 
           export TEMP_PATH="/tmp/php$PVC_VERSION"
           if [ ! -d $TEMP_PATH ]; then
-	     mkdir $TEMP_PATH
+            mkdir $TEMP_PATH
           fi
-	
+
           if [ ! -f $TEMP_PATH/php ]; then
             ln -snf /usr/bin/php$PVC_VERSION $TEMP_PATH/php
           fi
@@ -71,4 +71,3 @@ pvc() {
 }
 add-zsh-hook chpwd pvc
 pvc
-
